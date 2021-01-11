@@ -11,9 +11,9 @@ def partition(ls, lo, hi):
 def quickSort(ls, lo, hi):
     if len(ls) == 1:
         return ls
+    # Recursively divide to values left/right of pivot
     if lo < hi:
         pivIdx = partition(ls, lo, hi) # sorts the pivot (exclusively) in correct position
-        # Recursively divide to values left/right of pivot
         quickSort(ls, lo, pivIdx-1)
         quickSort(ls, pivIdx+1, hi)
 
@@ -34,6 +34,7 @@ Implied... since left region strictly contains: vals < pivot ,  thus right must 
 
 [i+1] = correct pivot
 
-smaller region           bigger region     unprocessed
+smaller region           bigger region
 ls[0]...ls[i] | pivot | ls[i+1]...ls[j] | ls[j]...ls[n-1]
+<------------- processed --------------> <-- unprocessed -->
 """
