@@ -29,8 +29,9 @@ if __name__ == "__main__"":
 
 
 """
-Lamuto's Partition Scheme: Choose pivot and sort in correct position, by moving all values smaller than our pivot to left.
-Implied... since left region strictly contains: vals < pivot ,  thus right must contain: vals >= pivot
+Lamuto's Partition Scheme,  Places any given pivot value in it's correct Sorted position
+- Sort using pivot: by moving all values smaller than our pivot to it's left.
+- Implied, right must contain: vals >= pivot to  (since left region strictly contains: vals < pivot)
 
 [i+1] = correct pivot
 
